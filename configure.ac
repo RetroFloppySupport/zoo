@@ -30,11 +30,11 @@ AM_CONDITIONAL([ENABLE_UNZOO], [test "x$enable_unzoo" != "xno"])
 
 AC_CANONICAL_HOST
 case $host in
-  *-linux*)
+  *-linux* | *-apple*)
     MACHINE=-DLINUX
     SYS=-DSYS_IS_UNIX
     ;;
-  *-freebsd* | *-openbsd* | *-netbsd* | *-dragonfly* | *-solaris* | *-apple*)
+  *-freebsd* | *-openbsd* | *-netbsd* | *-dragonfly* | *-solaris*)
     MACHINE=-DBSD4_3
     SYS=-DSYS_IS_UNIX
     ;;
