@@ -10,6 +10,7 @@
 #ifdef HAVE_NFTW
 #define _XOPEN_SOURCE 500	/* Rrequired on GLIBC */
 #define _GNU_SOURCE		/* -- " -- " -- " --  */
+#define _POSIX_C_SOURCE 200809L	/* -- " -- " -- " --  */
 #include <ftw.h>
 #endif
 
